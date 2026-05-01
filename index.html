@@ -463,29 +463,6 @@ footer{
 <body>
 
 <!-- NAV -->
-<div id="bday-banner" style="
-  position:fixed;bottom:24px;right:24px;z-index:500;
-  background:linear-gradient(135deg,#1A1A1A,#242424);
-  border:1px solid rgba(200,150,44,.4);
-  border-radius:12px;padding:14px 20px;
-  display:flex;align-items:center;gap:12px;
-  box-shadow:0 8px 32px rgba(0,0,0,.5);
-  animation:slideIn .5s .3s both;
-  max-width:280px;
-">
-  <span style="font-size:24px">🎂</span>
-  <div>
-    <div style="font-family:'Playfair Display',serif;font-size:13px;font-weight:700;color:#FAFAFA;line-height:1.2">Joyeux anniversaire<br>Amadou !</div>
-    <div style="font-size:11px;color:rgba(200,150,44,.9);margin-top:3px;font-weight:500">28 avril 2026</div>
-  </div>
-  <button onclick="document.getElementById('bday-banner').remove()" style="
-    margin-left:auto;background:none;border:none;color:rgba(255,255,255,.3);
-    font-size:16px;cursor:pointer;padding:2px 4px;line-height:1;
-  ">×</button>
-</div>
-<style>
-@keyframes slideIn{{from{{opacity:0;transform:translateY(20px)}}to{{opacity:1;transform:none}}}}
-</style>
 <nav id="nav">
   <div class="nav-logo">
     5 Min <span class="nav-logo-accent">pour Grandir</span>
@@ -651,7 +628,7 @@ footer{
     <li><a href="https://podcasts.apple.com/ca/podcast/5-minutes-pour-grandir/id1883504465?l=fr-CA" target="_blank">Apple Podcasts</a></li>
     <li><a href="https://music.amazon.fr/podcasts/6e8512ca-4c51-48e8-bd96-a9fc350f384c/5-minutes-pour-grandir" target="_blank">Amazon Music</a></li>
   </ul>
-  <span class="foot-copy">© 2026 Amadou Baldé 🎂 — <span data-i18n="footer.rights">Tous droits réservés</span></span>
+  <span class="foot-copy">© 2026 Amadou Baldé — <span data-i18n="footer.rights">Tous droits réservés</span></span>
 </footer>
 
 <script>
@@ -750,7 +727,7 @@ const EPS=[
   {n:14,t:"Relations toxiques : comment les reconnaître et s'en libérer",d:"La toxicité ne porte pas toujours un masque évident. Apprenez à lire les signaux.",tone:"direct",s:"done"},
   {n:15,t:"L'argent ne change pas les gens — il les révèle",d:"L'argent amplifie ce qui est déjà là. Avant de courir après plus, demandez-vous qui vous êtes.",tone:"reflexif",s:"done"},
   {n:16,t:"Arrêtez d'attendre la permission pour réussir",d:"Personne ne viendra vous dire que vous êtes prêt. La seule permission qui compte, c'est la vôtre.",tone:"direct",s:"done"},
-  {n:17,t:"La médiocrité confortable : le piège le plus dangereux",d:"L'échec force à réagir. La médiocrité confortable endort doucement. C'est pour ça qu'elle est plus dangereuse.",tone:"direct",s:"soon"},
+  {n:17,t:"La médiocrité confortable : le piège le plus dangereux",d:"L'échec force à réagir. La médiocrité confortable endort doucement. C'est pour ça qu'elle est plus dangereuse.",tone:"direct",s:"done"},
   {n:18,t:"Penser grand quand tout vous dit de rester petit",d:"Dans un monde qui invite à se contenter de moins, penser grand est un acte de résistance.",tone:"inspirant",s:"soon"},
   {n:19,t:"Votre corps n'est pas un ennemi — apprenez à l'écouter",d:"Votre corps parle en permanence. L'écouter, c'est accéder à une intelligence que votre mental n'a pas.",tone:"reflexif",s:"soon"},
   {n:20,t:"Le silence est une pratique, pas une absence",d:"Dans un monde saturé de bruit, le silence est devenu subversif. Découvrez pourquoi l'accueillir change tout.",tone:"reflexif",s:"soon"},
@@ -786,7 +763,7 @@ function renderEps(){
       <div class="ep-meta"><span class="ep-num">EP.${String(ep.n).padStart(2,'0')}</span><span class="ep-status ${st.cls}">${st.label}</span></div>
       <div class="ep-title">${ep.t}</div>
       <div class="ep-desc">${ep.d}</div>
-      <div class="ep-foot"><span class="ep-tone">${t('tone.'+ep.tone)}</span><span class="ep-arrow">↗</span></div>
+      
     </div>`;
     grid.appendChild(card);
   });
